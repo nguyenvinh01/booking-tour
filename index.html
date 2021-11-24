@@ -117,19 +117,39 @@
 
         <form action="">
             <div class="inputBox">
-                <h3>where to</h3>
-                <input type="text" placeholder="place name">
+                <h3>Nơi đến</h3>
+                <input type="text" placeholder="Tên địa điểm" list="ds" >
+                <datalist id="ds">
+                    <option value="Chùa Thầy - Sài Sơn - Quốc Oai - Hà Nội">
+                    <option value="Hồ Hoàn Kiếm – Hà Nội">
+                    <option value="Cố đô Huế">
+                    <option value="Phố cổ Hội An">
+                    <option value="Phong Nha Kẻ Bàng – Quảng Bình"> 
+                    <option value="Đà Lạt – Lâm Đồng"> 
+                    <option value="Thác Bản Giốc – Cao Bằng">    
+                    <option value="Hà Giang"> 
+                    <option value="Vịnh Hạ Long"> 
+                    <option value="Đảo Phú Quốc">            
+                    <option value="--tất cả--"> 
+
+
+
+
+
+
             </div>
             <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
+                <h3>số người</h3>
+                <input  type="number"   placeholder="Người tham gia " min="1" max="20"> 
+                 
+                
             </div>
             <div class="inputBox">
-                <h3>arrivals</h3>
+                <h3>Ngày đến</h3>
                 <input type="date">
             </div>
             <div class="inputBox">
-                <h3>leaving</h3>
+                <h3>Ngày dời đi</h3>
                 <input type="date">
             </div>
             <input type="submit" class="btn" value="book now">
