@@ -357,6 +357,10 @@ header .search-bar-container label:hover{
 .packages .box-container .box .content{
   padding:2rem;
 }
+.packages .box-container .box .content .contain-btn {
+  display: flex;
+  justify-content: space-between;
+}
 
 .packages .box-container .box .content h3{
   font-size:2rem;
