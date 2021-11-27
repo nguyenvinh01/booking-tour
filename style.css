@@ -348,6 +348,12 @@ header .search-bar-container label:hover{
   box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
 }
 
+.packages .box-container .box:hover{
+  transform: translateY(-20px);
+  box-shadow: orange  2px 2px ;
+  
+
+}
 .packages .box-container .box img{
   height: 25rem;
   width:100%;
@@ -382,6 +388,10 @@ header .search-bar-container label:hover{
   font-size: 2rem;
   color:#333;
   padding-top: 1rem;
+}
+.bokview{
+  display: flex;
+  justify-content: space-between;
 }
 
 .packages .box-container .box .content .price span{
