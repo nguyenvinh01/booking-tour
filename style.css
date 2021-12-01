@@ -349,8 +349,8 @@ header .search-bar-container label:hover{
 }
 
 .packages .box-container .box:hover{
-  transform: translateY(-20px);
-  box-shadow: orange  2px 2px ;
+  transform: translateY(-1rem);
+  box-shadow:  0 1rem 2rem rgba(0,0,0,.1); ;
   
 
 }
