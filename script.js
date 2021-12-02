@@ -42,12 +42,12 @@ videoBtn.forEach(btn =>{
         document.querySelector('#video-slider').src = src;
     });
 });
-
+// js review
 var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     loop:true,
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
     },
     breakpoints: {
