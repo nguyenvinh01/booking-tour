@@ -110,7 +110,7 @@
 }
 .popup-chat form .field input:focus,
 .popup-chat form .field textarea:focus{
-  border-color: #ec9f05;  
+  border-color: orange;  
 }
 .popup-chat .chat-box form .textarea{
   height: 70px;
@@ -828,3 +828,6 @@ header .search-bar-container label:hover{
   }
 
 }
+ .location .mapouter{
+  
+ }
