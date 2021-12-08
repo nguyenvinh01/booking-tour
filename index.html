@@ -39,13 +39,13 @@
                 <input type="text" placeholder="Họ và tên... ">
              </div>
              <div class="field">
-                <input type="email" placeholder="Email... " required>
+                <input type="email" placeholder="Email... ">
              </div>
              <div class="field textarea">
-                <textarea cols="30" rows="10" placeholder="Tin nhắn... " required></textarea>
+                <textarea cols="30" rows="10" placeholder="Tin nhắn... "></textarea>
              </div>
              <div class="field">
-                <button type="submit" onclick="showSuccessToast();">bắt đầu chat</button>
+                <button type="button" onclick="showSuccessToast();">bắt đầu chat</button>
              </div>
           </form>
        </div>
@@ -109,8 +109,8 @@
         <input type="submit" value="đăng nhập" class="btn">
         <input type="checkbox" id="remember">
         <label for="remember">Lưu đăng nhập</label>
-        <p><a href="#">quên mật khẩu?</a></p>
-        <p><a href="#">Tạo tài khoản mới</a></p>
+        <p><a href="#" class="forgot-pass">quên mật khẩu?</a></p>
+        <p><a href="#" class="new-acc">Tạo tài khoản mới</a></p>
         <p style="opacity: 0.7;">hoặc</p>
         <div>
             <a href="#"><i class="fab fa-facebook-square" style="color:#0e78cfc5 ;"></i></a>
@@ -121,8 +121,48 @@
 
 </div>
 <!-- login form container  -->
+<!-- register -->
+<div  id="register">
+
+    <i class="fas fa-times" id="form-close-res"></i>
+
+    <form action="" id="form-submit">
+        <h3>đăng ký</h3>
+        <input type="text" class="box" placeholder="họ và tên">
+        <input type="date" class="box" placeholder="ngày sinh">
+        <input type="radio" name="gender" value="male"> <label class="gen"> Nam</label> <input type="radio" name="gender" value="female"> <label class="gen"> Nữ</label> 
+        <input type="email" class="box" placeholder="email">
+        <input type="password" class="box" placeholder="mật khẩu">
+        <input type="password" class="box" placeholder="nhập lại mật khẩu">
+        <div class="inputBox">
+        </div>
+        <input type="reset" value="đăng ký" class="btn" onclick="showRegisToast()">
+        <input type="checkbox" id="remember">
+        <label for="remember">Tôi đồng ý với điều khoản dịch vụ</label>
+        <br>
+        <label for="">Đã có tài khoản? </label> <a href="#" class="sign-in"><label for=""> đăng nhập</label></a>
+
+    </form>
+
+</div>
+<!-- register -->
+<!-- forgot pass -->
+<div  id="forgot">
+
+    <i class="fas fa-times" id="form-close-forgot"></i>
+
+    <form action="" id="form-submit">
+        <h3>Quên mật khẩu</h3>
+        <p>Email đăng kí</p>
+        <input type="text" class="box" placeholder="email đăng kí">
+        <button type="reset" class="btn" onclick="showForgotToast()">Gửi lại mật khẩu</button>
+        <a href="#" class="forgot-back"><label for="">Trở lại đăng nhập</label></a>
+    </form>
+
+</div>
 
 
+<!-- forgot pass -->
 
 <!-- home   -->
 
@@ -711,7 +751,7 @@
                 <input type="text" placeholder="địa chỉ liên hệ ">
             </div>
             <textarea placeholder="lời nhắn" name="" id="" cols="30" rows="10"></textarea>
-            <input type="submit" class="btn" value="gửi " onclick="showSuccessToast()">
+            <input type="reset" class="btn" value="gửi " onclick="showSuccessToast()">
         </form>
 
     </div>
@@ -828,7 +868,24 @@
       });
       document.getElementById("form-submit").reset();
     }
-
+    function showRegisToast() {
+      toast({
+        title: "Thành công!",
+        message: "Bạn đã đăng kí thành công.",
+        type: "success",
+        duration: 3000
+      });
+      document.getElementById("form-submit").reset();
+    }
+    function showForgotToast() {
+      toast({
+        title: "Thành công!",
+        message: "Mật khẩu mới đã được gửi về email",
+        type: "success",
+        duration: 3000
+      });
+      document.getElementById("form-submit").reset();
+    }
   </script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  /* transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55); */
 }
 .popup-chat #click:checked ~ .wrapper{
   opacity: 1;
@@ -246,16 +246,13 @@ header .search-bar-container{
   padding:1.5rem 2rem;
   background:#333;
   border-top: .1rem solid rgba(255,255,255,.2);
-  /* display: flex; */
   align-items: center;
   z-index: 1001;
-  /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
   top: 0rem;
   display: none;
 }
 
 header .search-bar-container.active{
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
   top: 7rem;
   display: flex;
 }
@@ -788,13 +785,13 @@ header .search-bar-container label:hover{
 
 /* media queries  */
 
-@media (max-width:1200px){
+/* @media (max-width:1200px){
 
   html{
     font-size: 55%;
   }
 
-}
+} */
 
 @media (max-width:991px){
 
@@ -820,14 +817,11 @@ header .search-bar-container label:hover{
     background: #333;
     border-top: .1rem solid rgba(255,255,255,.2);
     padding:1rem 2rem;
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
     display: none;
   }
 
   header .navbar.active{
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
     display: block;
-    /* left: 7rem; */
   }
 
   header .navbar a{
@@ -853,11 +847,10 @@ header .search-bar-container label:hover{
   .contact .row form .inputBox input{
     width:100%;
   }
-
+  .brand-slider,.review-slider{
+    overflow: hidden;
+  }
 }
- .location .mapouter{
-  
- }
 
  
 #toast {
@@ -962,5 +955,209 @@ header .search-bar-container label:hover{
 .toast__close {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+#register{
+  position: fixed;
+  top:-120%; left: 0;
+  z-index: 10001;
+  min-height: 100vh;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#register div a i {
+  margin: 0 1rem;
+  font-size: 4rem;
+}
+#register div a i:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+#register.active{
+  top:0;
+}
+
+#register form{
+  margin:2rem;
+  padding:1.5rem 2rem;
+  border-radius: .5rem;
+  background:#fff;
+  width:50rem;
+}
+
+#register form h3{
+  font-size: 3rem;
+  color:#444;
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+}
+
+#register form .box{
+  width:100%;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  margin:.6rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+#register form .box:focus{
+  border-color: var(--orange);;
+}
+
+#register form #remember{
+  margin:2rem 0;
+}
+
+#register form label{
+  font-size: 1.5rem;
+}
+
+#register form .btn{
+  display: block;
+  width:100%;
+}
+
+#register form p{
+  padding:.5rem 0;
+  font-size: 1.5rem;
+  color:#666;
+}
+#register form p a{
+  color:var(--orange);
+}
+#register form p a:hover{
+  color:#333;
+  text-decoration: underline;
+}
+
+#register #form-close-res{
+  position: absolute;
+  top:2rem; right:3rem;
+  font-size: 5rem;
+  color:#fff;
+  cursor: pointer;
+}
+#register form .inputBox{
+  padding:.5rem 0;
+}
+
+#register form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+#register form .gen{
+
+  margin-right: 0.5rem;
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+#register form a{
+  color: #ff4e00;
+}
+#register form a:hover label{
+  opacity: 0.7;
+  cursor:pointer;
+}
+
+/* forgot */
+#forgot{
+  position: fixed;
+  top:-120%; left: 0;
+  z-index: 10001;
+  min-height: 100vh;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#forgot div a i {
+  margin: 0 1rem;
+  font-size: 4rem;
+}
+#forgot div a i:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+#forgot.active{
+  top:0;
+}
+
+#forgot form{
+  margin:2rem;
+  padding:1.5rem 2rem;
+  border-radius: .5rem;
+  background:#fff;
+  width:50rem;
+}
+
+#forgot form h3{
+  font-size: 3rem;
+  color:#444;
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+}
+
+#forgot form .box{
+  width:100%;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  margin:.6rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+#forgot form .box:focus{
+  border-color: var(--orange);;
+}
+
+
+#forgot form label{
+  font-size: 1.5rem;
+}
+
+#forgot form button{
+  display: block;
+  width:100%;
+  padding:.5rem 0;
+  font-size: 1.5rem;
+}
+
+ #forgot form p{
+  padding:.5rem 0;
+  font-size: 1.5rem;
+  color:#666;
+ }
+ 
+#forgot form a{
+  color:var(--orange);
+}
+
+#forgot form a:hover label{
+  opacity: 0.7;
+  cursor:pointer;
+  text-decoration: underline;
+
+}
+#forgot #form-close-forgot{
+  position: absolute;
+  top:2rem; right:3rem;
+  font-size: 5rem;
+  color:#fff;
   cursor: pointer;
 }

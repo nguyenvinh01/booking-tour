@@ -7,6 +7,14 @@ let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
 let header = document.querySelector('header');
+let regis = document.querySelector('#register');
+let formCloseRes = document.querySelector('#form-close-res');
+let newacc = document.querySelector('.new-acc');
+let signin = document.querySelector('.sign-in');
+let forgotform = document.querySelector('#forgot');
+let formCloseForgot = document.querySelector('#form-close-forgot');
+let forgotbtn = document.querySelector('.forgot-pass');
+let forgotback = document.querySelector('.forgot-back');
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
@@ -14,6 +22,10 @@ window.onscroll = () =>{
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
     loginForm.classList.remove('active');
+    regis.classList.remove('active');
+    loginForm.classList.remove('active');
+    forgotform.classList.remove('active');
+
 }
 
 menu.addEventListener('click', () =>{
@@ -42,6 +54,33 @@ videoBtn.forEach(btn =>{
         document.querySelector('#video-slider').src = src;
     });
 });
+
+
+newacc.addEventListener('click', () =>{
+  loginForm.classList.remove('active');
+  regis.classList.add('active');
+});
+
+formCloseRes.addEventListener('click', () =>{
+  regis.classList.remove('active');
+});
+
+signin.addEventListener('click',() =>{
+  loginForm.classList.add('active');
+  regis.classList.remove('active');
+})
+
+forgotbtn.addEventListener('click', () =>{
+  loginForm.classList.remove('active');
+  forgotform.classList.add('active');
+});
+formCloseForgot.addEventListener('click', () =>{
+  forgotform.classList.remove('active');
+});
+forgotback.addEventListener('click',() =>{
+  loginForm.classList.add('active');
+  forgotform.classList.remove('active');
+})
 // js review
 var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
