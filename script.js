@@ -57,8 +57,8 @@ videoBtn.forEach(btn =>{
 
 
 newacc.addEventListener('click', () =>{
-  loginForm.classList.remove('active');
   regis.classList.add('active');
+  loginForm.classList.remove('active');
 });
 
 formCloseRes.addEventListener('click', () =>{
@@ -106,13 +106,12 @@ var swiper = new Swiper(".brand-slider", {
     spaceBetween: 20,
     loop:true,
     autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+        delay: 2500
     },
     breakpoints: {
         450: {
           slidesPerView: 2,
-        },
+        },    
         768: {
           slidesPerView: 3,
         },
@@ -126,7 +125,7 @@ var swiper = new Swiper(".brand-slider", {
 });
 
 // Toast function
-function toast({ title = "", message = "", type = "info", duration = 3000 }) {
+function toast({ title = "", message = "", duration = 3000 }) {
   const main = document.getElementById("toast");
   if (main) {
     const toast = document.createElement("div");
@@ -144,21 +143,21 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
       }
     };
 
-    const icons = {
-      success: "fas fa-check-circle",
-      info: "fas fa-info-circle",
-      warning: "fas fa-exclamation-circle",
-      error: "fas fa-exclamation-circle"
-    };
-    const icon = icons[type];
+    // const icons = {
+    //   success: "fas fa-check-circle",
+    //   info: "fas fa-info-circle",
+    //   warning: "fas fa-exclamation-circle",
+    //   error: "fas fa-exclamation-circle"
+    // };
+    // const icon = icons[type];
     const delay = (duration / 1000).toFixed(2);
 
-    toast.classList.add("toast", `toast--${type}`);
+    toast.classList.add("toast", `toast--success`);
     toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
 
     toast.innerHTML = `
                     <div class="toast__icon">
-                        <i class="${icon}"></i>
+                        <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="toast__body">
                         <h3 class="toast__title">${title}</h3>

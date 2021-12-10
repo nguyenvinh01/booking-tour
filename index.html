@@ -289,7 +289,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND <span>1.200.000 VND</span> </div>
                 <div class="bokview">                
-                    <a href="#book" class="btn">book now</a>
+                    <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                     <a href="#" class="btn" onclick="window.open('https://bom.so/6FV9uT',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -315,7 +315,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND <span>1.200.000 VND</span> </div>
                 <div class="bokview">
-                <a href="#book" class="btn">book now</a>
+                <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                 <a href="#" class="btn" onclick="window.open('https://bom.so/IcwYdO',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -340,7 +340,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND <span>1.200.000 VND</span> </div>
                 <div class="bokview">
-                <a href="#book" class="btn">book now</a>
+                <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                 <a href="#" class="btn" onclick="window.open('https://bom.so/Z87KYN',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -365,7 +365,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND <span>1.200.000 VND</span> </div>
                 <div class="bokview">
-                <a href="#book" class="btn">book now</a>
+                <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                 <a href="#" class="btn" onclick="window.open('https://bom.so/B1LEAy',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -390,7 +390,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND<span>1.200.000 VND</span> </div>
                 <div class="bokview">
-                <a href="#book" class="btn">book now</a>
+                <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                 <a href="" class="btn" onclick="window.open('https://bom.so/DRPDom',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -415,7 +415,7 @@
                 </div>
                 <div class="price"> 1.000.000 VND<span>1.200.000 VND</span> </div>
                 <div class="bokview">
-                    <a href="#book" class="btn">book now</a>
+                    <a href="#book" class="btn" onclick="showBookingToast()">book now</a>
                     <a href="#" class="btn" onclick="window.open('https://bom.so/P9vwic',
                          'newwindow', 
                          'width=600,height=300'); 
@@ -863,7 +863,6 @@
       toast({
         title: "Thành công!",
         message: "Bạn đã gửi tin nhắn thành công.",
-        type: "success",
         duration: 3000
       });
       document.getElementById("form-submit").reset();
@@ -872,7 +871,6 @@
       toast({
         title: "Thành công!",
         message: "Bạn đã đăng kí thành công.",
-        type: "success",
         duration: 3000
       });
       document.getElementById("form-submit").reset();
@@ -881,10 +879,16 @@
       toast({
         title: "Thành công!",
         message: "Mật khẩu mới đã được gửi về email",
-        type: "success",
         duration: 3000
       });
       document.getElementById("form-submit").reset();
+    }
+    function showBookingToast() {
+      toast({
+        title: "Thành công!",
+        message: "Bạn đã đặt tour thành công",
+        duration: 3000
+      });
     }
   </script>
 </body>
